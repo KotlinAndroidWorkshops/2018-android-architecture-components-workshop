@@ -1,27 +1,9 @@
-package fr.ekito.myweatherapp.data.repository.json.geocode
+package fr.ekito.myweatherapp.data.datasource.webservice.json.geocode
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class Viewport {
-
-    /**
-     * @return The northeast
-     */
-    /**
-     * @param northeast The northeast
-     */
-    @SerializedName("northeast")
-    @Expose
-    var northeast: Northeast? = null
-    /**
-     * @return The southwest
-     */
-    /**
-     * @param southwest The southwest
-     */
-    @SerializedName("southwest")
-    @Expose
-    var southwest: Southwest? = null
-
-}
+data class Viewport(
+        @SerializedName("northeast") @Expose var northeast: Northeast? = null,
+        @SerializedName("southwest") @Expose var southwest: Southwest? = null
+)

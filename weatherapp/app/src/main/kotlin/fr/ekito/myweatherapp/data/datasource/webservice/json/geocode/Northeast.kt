@@ -1,27 +1,9 @@
-package fr.ekito.myweatherapp.data.repository.json.geocode
+package fr.ekito.myweatherapp.data.datasource.webservice.json.geocode
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class Northeast {
-
-    /**
-     * @return The lat
-     */
-    /**
-     * @param lat The lat
-     */
-    @SerializedName("lat")
-    @Expose
-    var lat: Double? = null
-    /**
-     * @return The lng
-     */
-    /**
-     * @param lng The lng
-     */
-    @SerializedName("lng")
-    @Expose
-    var lng: Double? = null
-
-}
+data class Northeast(
+        @SerializedName("lat") @Expose var lat: Double? = null,
+        @SerializedName("lng") @Expose var lng: Double? = null
+)

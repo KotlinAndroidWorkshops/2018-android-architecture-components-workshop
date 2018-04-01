@@ -1,8 +1,8 @@
 package fr.ekito.myweatherapp.data.datasource.webservice
 
 import io.reactivex.Single
-import fr.ekito.myweatherapp.data.repository.json.geocode.Geocode
-import fr.ekito.myweatherapp.data.repository.json.weather.Weather
+import fr.ekito.myweatherapp.data.datasource.webservice.json.geocode.Geocode
+import fr.ekito.myweatherapp.data.datasource.webservice.json.weather.Weather
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Query

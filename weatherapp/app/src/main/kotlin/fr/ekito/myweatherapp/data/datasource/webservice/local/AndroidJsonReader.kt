@@ -1,6 +1,7 @@
 package fr.ekito.myweatherapp.data.datasource.local
 
 import android.app.Application
+import fr.ekito.myweatherapp.data.datasource.webservice.local.BaseReader
 import java.io.BufferedReader
 import java.io.InputStreamReader
 

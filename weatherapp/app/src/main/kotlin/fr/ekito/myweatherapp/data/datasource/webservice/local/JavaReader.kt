@@ -1,6 +1,5 @@
 package fr.ekito.myweatherapp.data.datasource.webservice.local
 
-import fr.ekito.myweatherapp.data.datasource.local.BaseReader
 import java.io.File
 
 /**
@@ -10,8 +9,7 @@ class JavaReader : BaseReader() {
 
     fun basePath(): String? {
         val classLoader: ClassLoader = JavaReader::class.java.classLoader
-        val path: String? = classLoader.getResource("json/")?.path
-        return path
+        return classLoader.getResource("json/")?.path
     }
 
     override fun getAllFiles(): List<String> {

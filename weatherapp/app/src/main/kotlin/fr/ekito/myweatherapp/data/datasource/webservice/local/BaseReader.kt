@@ -1,9 +1,9 @@
-package fr.ekito.myweatherapp.data.datasource.local
+package fr.ekito.myweatherapp.data.datasource.webservice.local
 
 import com.google.gson.Gson
-import fr.ekito.myweatherapp.data.repository.json.geocode.Geocode
-import fr.ekito.myweatherapp.data.repository.json.geocode.Location
-import fr.ekito.myweatherapp.data.repository.json.weather.Weather
+import fr.ekito.myweatherapp.data.datasource.webservice.json.geocode.Geocode
+import fr.ekito.myweatherapp.data.datasource.webservice.json.geocode.Location
+import fr.ekito.myweatherapp.data.datasource.webservice.json.weather.Weather
 
 /**
  * Common parts for Json reader

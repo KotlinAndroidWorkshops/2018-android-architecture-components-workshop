@@ -1,67 +1,16 @@
-package fr.ekito.myweatherapp.data.repository.json.weather
+package fr.ekito.myweatherapp.data.datasource.webservice.json.weather
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class Forecastday {
-
-    /**
-     * @return The period
-     */
-    /**
-     * @param period The period
-     */
-    @Expose
-    var period: Int? = null
-    /**
-     * @return The icon
-     */
-    /**
-     * @param icon The icon
-     */
-    @Expose
-    var icon: String? = null
-    /**
-     * @return The iconUrl
-     */
-    /**
-     * @param iconUrl The icon_url
-     */
-    @SerializedName("iconUrl")
-    @Expose
-    var iconUrl: String? = null
-    /**
-     * @return The title
-     */
-    /**
-     * @param title The title
-     */
-    @Expose
-    var title: String? = null
-    /**
-     * @return The fcttext
-     */
-    /**
-     * @param fcttext The fcttext
-     */
-    @Expose
-    var fcttext: String? = null
-    /**
-     * @return The fcttextMetric
-     */
-    /**
-     * @param fcttextMetric The fcttext_metric
-     */
-    @SerializedName("fcttextMetric")
-    @Expose
-    var fcttextMetric: String? = null
-    /**
-     * @return The pop
-     */
-    /**
-     * @param pop The pop
-     */
-    @Expose
-    var pop: String? = null
-
-}
+data class ForecastDay(
+        @Expose var period: Int? = null,
+        @Expose var icon: String? = null,
+        @SerializedName("iconUrl")
+        @Expose var iconUrl: String? = null,
+        @Expose var title: String? = null,
+        @Expose var fcttext: String? = null,
+        @SerializedName("fcttextMetric")
+        @Expose var fcttextMetric: String? = null,
+        @Expose var pop: String? = null
+)

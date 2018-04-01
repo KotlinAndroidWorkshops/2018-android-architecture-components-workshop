@@ -1,18 +1,5 @@
-package fr.ekito.myweatherapp.data.repository.json.weather
+package fr.ekito.myweatherapp.data.datasource.webservice.json.weather
 
 import com.google.gson.annotations.Expose
 
-import java.util.ArrayList
-
-class Simpleforecast {
-
-    /**
-     * @return The forecastday
-     */
-    /**
-     * @param forecastday The forecastday
-     */
-    @Expose
-    var forecastday: List<Forecastday_> = ArrayList()
-
-}
+data class SimpleForecast(@Expose var forecastday: List<Forecastday_> = emptyList())

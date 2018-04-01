@@ -1,26 +1,8 @@
-package fr.ekito.myweatherapp.data.repository.json.weather
+package fr.ekito.myweatherapp.data.datasource.webservice.json.weather
 
 import com.google.gson.annotations.Expose
 
-import java.util.ArrayList
-
-class TxtForecast {
-
-    /**
-     * @return The date
-     */
-    /**
-     * @param date The date
-     */
-    @Expose
-    var date: String? = null
-    /**
-     * @return The forecastday
-     */
-    /**
-     * @param forecastday The forecastday
-     */
-    @Expose
-    var forecastday: List<Forecastday> = ArrayList()
-
-}
+data class TxtForecast(
+        @Expose var date: String? = null,
+        @Expose var forecastday: List<ForecastDay> = emptyList()
+)

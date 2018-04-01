@@ -1,24 +1,8 @@
-package fr.ekito.myweatherapp.data.repository.json.weather
+package fr.ekito.myweatherapp.data.datasource.webservice.json.weather
 
 import com.google.gson.annotations.Expose
 
-class QpfDay {
-
-    /**
-     * @return The in
-     */
-    /**
-     * @param in The in
-     */
-    @Expose
-    var `in`: Double? = null
-    /**
-     * @return The mm
-     */
-    /**
-     * @param mm The mm
-     */
-    @Expose
-    var mm: Int? = null
-
-}
+data class QpfDay(
+        @Expose var `in`: Double? = null,
+        @Expose var mm: Int? = null
+)

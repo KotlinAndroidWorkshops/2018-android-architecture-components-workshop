@@ -1,15 +1,15 @@
 package fr.ekito.myweatherapp.domain
 
-import fr.ekito.myweatherapp.data.repository.json.weather.Forecastday
-import fr.ekito.myweatherapp.data.repository.json.weather.Forecastday_
-import fr.ekito.myweatherapp.data.repository.json.weather.Weather
+import fr.ekito.myweatherapp.data.datasource.webservice.json.weather.ForecastDay
+import fr.ekito.myweatherapp.data.datasource.webservice.json.weather.Forecastday_
+import fr.ekito.myweatherapp.data.datasource.webservice.json.weather.Weather
 
 /**
  * Extract Weather DailyForecastModel list from Weather
  */
 fun Weather.getDailyForecasts(location: String): List<DailyForecastModel> {
-    val txtList: List<Forecastday> = forecast?.txtForecast?.forecastday.orEmpty()
-    return forecast?.simpleforecast?.forecastday.orEmpty()
+    val txtList: List<ForecastDay> = forecast?.txtForecast?.forecastday.orEmpty()
+    return forecast?.simpleForecast?.forecastday.orEmpty()
         .map { f: Forecastday_ -> DailyForecastModel.from(location, f) }
         .map { f ->
             f.copy(

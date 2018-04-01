@@ -1,8 +1,8 @@
-package fr.ekito.myweatherapp.data.datasource.local
+package fr.ekito.myweatherapp.data.datasource.webservice.local
 
 import fr.ekito.myweatherapp.data.datasource.webservice.WeatherWebDatasource
-import fr.ekito.myweatherapp.data.repository.json.geocode.Geocode
-import fr.ekito.myweatherapp.data.repository.json.weather.Weather
+import fr.ekito.myweatherapp.data.datasource.webservice.json.geocode.Geocode
+import fr.ekito.myweatherapp.data.datasource.webservice.json.weather.Weather
 import io.reactivex.Single
 import java.util.concurrent.TimeUnit
 

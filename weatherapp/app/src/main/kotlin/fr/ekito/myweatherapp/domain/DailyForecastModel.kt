@@ -1,6 +1,6 @@
 package fr.ekito.myweatherapp.domain
 
-import fr.ekito.myweatherapp.data.repository.json.weather.Forecastday_
+import fr.ekito.myweatherapp.data.datasource.webservice.json.weather.Forecastday_
 import java.util.*
 
 /**

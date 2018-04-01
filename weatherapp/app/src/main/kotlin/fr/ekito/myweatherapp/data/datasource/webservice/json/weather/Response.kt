@@ -1,32 +1,9 @@
-package fr.ekito.myweatherapp.data.repository.json.weather
+package fr.ekito.myweatherapp.data.datasource.webservice.json.weather
 
 import com.google.gson.annotations.Expose
 
-class Response {
-
-    /**
-     * @return The version
-     */
-    /**
-     * @param version The version
-     */
-    @Expose
-    var version: String? = null
-    /**
-     * @return The termsofService
-     */
-    /**
-     * @param termsofService The termsofService
-     */
-    @Expose
-    var termsofService: String? = null
-    /**
-     * @return The features
-     */
-    /**
-     * @param features The features
-     */
-    @Expose
-    var features: Features? = null
-
-}
+data class Response(
+        @Expose var version: String? = null,
+        @Expose var termsofService: String? = null,
+        @Expose var features: Features? = null
+)
