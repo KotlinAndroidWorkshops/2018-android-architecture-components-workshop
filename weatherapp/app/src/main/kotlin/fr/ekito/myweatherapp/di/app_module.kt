@@ -4,20 +4,20 @@ import fr.ekito.myweatherapp.domain.repository.DailyForecastRepository
 import fr.ekito.myweatherapp.domain.repository.DailyForecastRepositoryImpl
 import fr.ekito.myweatherapp.util.rx.ApplicationSchedulerProvider
 import fr.ekito.myweatherapp.util.rx.SchedulerProvider
-import fr.ekito.myweatherapp.view.splash.SplashContract
-import fr.ekito.myweatherapp.view.splash.SplashPresenter
+import fr.ekito.myweatherapp.view.splash.SplashViewModel
 import fr.ekito.myweatherapp.view.weather.WeatherHeaderContract
 import fr.ekito.myweatherapp.view.weather.WeatherHeaderPresenter
 import fr.ekito.myweatherapp.view.weather.WeatherListContract
 import fr.ekito.myweatherapp.view.weather.WeatherListPresenter
+import org.koin.android.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.module
 
 /**
  * App Components
  */
 val weatherAppModule = module {
-    // Presenter for Search View
-    factory<SplashContract.Presenter> { SplashPresenter(get(), get()) }
+    // SplashViewModel for Splash View
+    viewModel { SplashViewModel(get(), get()) }
 
     // Presenter for ResultHeader View
     factory<WeatherHeaderContract.Presenter> { WeatherHeaderPresenter(get(), get()) }
