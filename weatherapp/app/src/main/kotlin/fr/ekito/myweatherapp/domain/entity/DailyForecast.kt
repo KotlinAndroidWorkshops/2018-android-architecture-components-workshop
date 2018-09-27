@@ -1,6 +1,7 @@
 package fr.ekito.myweatherapp.domain.entity
 
 import fr.ekito.myweatherapp.data.json.Forecastday_
+import fr.ekito.myweatherapp.data.room.WeatherEntity
 import java.util.*
 
 /**
@@ -46,6 +47,19 @@ data class DailyForecast(
                 Wind(f.avewind?.kph ?: 0, f.avewind?.dir ?: ""),
                 Humidity(f.avehumidity ?: 0)
             )
+
+        fun from(entity: WeatherEntity) = DailyForecast(
+            entity.location,
+            entity.day,
+            entity.shortText,
+            entity.fullText,
+            entity.iconUrl,
+            entity.icon,
+            Temperature(entity.temp_low, entity.temp_high),
+            Wind(entity.wind_kph, entity.wind_dir),
+            Humidity(entity.humidity),
+            entity.id
+        )
     }
 }
 
