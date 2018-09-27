@@ -31,3 +31,4 @@ val weatherAppModule = module {
 // Gather all app modules
 val onlineWeatherApp = listOf(weatherAppModule, remoteDataSourceModule)
 val offlineWeatherApp = listOf(weatherAppModule, localAndroidDataSourceModule)
+val roomWeatherApp = listOf(weatherAppModule, localAndroidDataSourceModule, roomDataSourceModule)
